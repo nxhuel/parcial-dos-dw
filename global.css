@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  background-color: aliceblue;
+  color: #222;
+  font-family: ChakraPetch-Regular;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+  background-color: #110038;
+  color: #eee;
+}
+
+body.dark-mode .header-container {
+  background: linear-gradient(to right, #2e32fb 0%, #ee3efe 100%);
+}
+
+body.dark-mode .button {
+  background-color: #ee3efe !important;
+  color: aliceblue !important;
+}
+
+body.dark-mode .themeSelect {
+  background-color: #ee3efe !important;
+  color: aliceblue !important;
+}
+
+body.dark-mode .link::before {
+  background-color: aliceblue !important;
+}
+
+body.dark-mode .search-title p {
+  background: linear-gradient(to right, #2e32fb 0%, #ee3efe 100%) !important;
+}
+
+body.dark-mode .suggestion-container {
+  p {
+    background: #fffafe;
+    border: 1px solid #2e32fb;
+    box-shadow: inset -2px -2px 0 0 #e6dce4, inset 2px 2px 0 0 #110038;
+    color: #222;
+  }
+}
+
+body.dark-mode .trending-container {
+  p {
+    background: #fffafe;
+    border: 1px solid #2e32fb;
+    box-shadow: inset -2px -2px 0 0 #e6dce4, inset 2px 2px 0 0 #110038;
+    color: #222;
+  }
+}

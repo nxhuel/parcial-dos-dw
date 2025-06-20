@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GIPHY</title>
+  </head>
+  <body>
+    <header>
+      <p>
+        ¡Bienvenidos/as a Guifos.com! ------ Donde los gifs están.//////Número
+        de visitas: 12.765.803
+      </p>
+    </header>
+
+    <!-- navbar -->
+    <nav>
+      <div class="">
+        <a href="../index.html"><-</a>
+        <p>gif.os</p>
+      </div>
+    </nav>
+
+    <section id="crear-guifo">
+      <div><p>Crear Guifos</p></div>
+      <div>
+        <div>
+          <div><p>img ref</p></div>
+          <h3>Aqui podras crear tus propios gifs</h3>
+        </div>
+        <p>texto explicativo</p>
+        <ul>
+          <li>
+            1. dar permisos de acceso a la camara (solo por el tiempo de uso)
+          </li>
+          <li>2. capturar tu momento guifo</li>
+          <li>3. revisar el momento</li>
+          <li>4. listo para subir y compartir</li>
+        </ul>
+        <p>comenzar?</p>
+      </div>
+      <div>
+        <button onclick="cancelarProceso()">cancelar</button>
+        <button onclick="iniciarEtapa1()">comenzar</button>
+      </div>
+    </section>
+
+    <section id="etapas">
+      <p id="etapa"></p>
+      <video id="video" autoplay muted style="display: none"></video>
+      <div>
+        <button id="btnCapturar" style="display: none">capturar</button>
+        <p id="cronometro" style="display: none">00:00</p>
+        <button id="btnListo" style="display: none">listo</button>
+        <button id="btnRepetir" style="display: none">repetir captura</button>
+        <button id="btnSubir" style="display: none">subir Guifo</button>
+        <button
+          id="btnCancelar"
+          style="display: none"
+          onclick="cancelarProceso()"
+        >
+          cancelar
+        </button>
+        <button id="btnCopiar" style="display: none">
+          Copiar enlace Guifo
+        </button>
+        <button id="btnDescargar" style="display: none">Descargar Guifo</button>
+        <button id="btnListoFinal" style="display: none">Listo</button>
+      </div>
+      <div id="preview" style="display: none"></div>
+      <div
+        id="barraUpload"
+        style="display: none; background: #eee; width: 100%; height: 10px"
+      >
+        <div
+          id="progresoUpload"
+          style="background: #6cf; height: 100%; width: 0%"
+        ></div>
+      </div>
+    </section>
+
+    <!-- my gifs -->
+    <div class=""><p>Mis guifos</p></div>
+
+    <!-- result -->
+    <section>
+      <div class="" id="statusMyGiphy"></div>
+      <div class="" id="resultMyGiphy"></div>
+    </section>
+
+    <!-- <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+    <script src="../environments/env.js"></script>
+
+    <script src="/services/createGiphy.js"></script> -->
+  </body>
+</html>
