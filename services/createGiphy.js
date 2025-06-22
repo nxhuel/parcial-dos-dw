@@ -4,24 +4,40 @@ let stream;
 let timerInterval;
 let segundos = 0;
 
+const header = document.getElementById("header");
+const etapas = document.getElementById("etapas");
 const etapa = document.getElementById("etapa");
+const videoContainer = document.getElementById("video-container");
 const video = document.getElementById("video");
 const preview = document.getElementById("preview");
+const btnCancel = document.getElementById("btn-cancel");
+const btnStart = document.getElementById("btn-start");
+const btnClose = document.getElementById("btn-close");
+
 
 const status = document.getElementById("statusMyGiphy");
 const result = document.getElementById("resultMyGiphy");
 
 function cancelarProceso() {
+    etapas.style.display = "none";
     etapa.textContent = '';
     video.style.display = 'none';
     preview.style.display = 'none';
     document.querySelectorAll('button').forEach(btn => btn.style.display = 'none');
+    btnCancel.style.display = 'block';
+    btnStart.style.display = 'block'
+
 }
 
 function iniciarEtapa1() {
+    document.getElementById("header").style.display = "block";
+    etapas.style.display = "block";
     etapa.textContent = "Un chequeo antes de empezar";
     document.getElementById("btnCapturar").style.display = "inline";
+    videoContainer.style.display = "block";
     video.style.display = "block";
+    btnClose.style.display = "block";
+
 
     navigator.mediaDevices.getUserMedia({ video: true }).then(mediaStream => {
         stream = mediaStream;
@@ -189,8 +205,8 @@ async function getAllMyGifs() {
         contenedor.appendChild(img);
     }
 
-
-    estado.textContent = "Tus guifos creados:";
+    estado.textContent = '';
+    // estado.textContent = "Tus guifos creados:";
 }
 
 window.onload = () => {

@@ -2,7 +2,9 @@
 
 .header-container {
   width: 100%;
-  height: 3rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
   background: linear-gradient(to right, #4180f6 0%, #f7c9f3 100%);
 
   p {
@@ -169,6 +171,14 @@
   align-items: center;
   padding: 1rem 1rem;
 
+  #suggestion {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 100%;
+    padding: 0.5rem;
+  }
+
   .card-container {
     /* background-color: rebeccapurple; */
     width: 15rem;
@@ -235,12 +245,12 @@
   justify-content: center;
 }
 
-.trending {
+#trending {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* responsive */
+  grid-template-columns: 1fr;
   gap: 1rem;
   width: 100%;
-  max-width: 1200px;
+  padding: 0.5rem;
 }
 
 .card-container {
@@ -260,4 +270,59 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.result-card-container {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+#result {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+/* Card individual */
+.card-container {
+  width: 100%;
+}
+
+/* Imagen con proporción adaptable */
+.img-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* TABLET (mínimo 600px): 2 columnas */
+@media (min-width: 600px) {
+  #result {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* DESKTOP (mínimo 900px): 3 columnas */
+@media (min-width: 900px) {
+  #result {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* GRANDE (mínimo 1200px): 4 columnas */
+@media (min-width: 1200px) {
+  #result {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1200px;
+  }
 }

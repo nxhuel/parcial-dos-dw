@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/createGifs.css" />
+    <link rel="stylesheet" href="/global.css" />
     <title>GIPHY</title>
   </head>
   <body>
-    <header>
+    <header class="header-container">
       <p>
         ¡Bienvenidos/as a Guifos.com! ------ Donde los gifs están.//////Número
         de visitas: 12.765.803
@@ -14,42 +16,58 @@
     </header>
 
     <!-- navbar -->
-    <nav>
-      <div class="">
-        <a href="../index.html"><-</a>
-        <p>gif.os</p>
+    <nav class="navbar-container">
+      <div class="logo-container">
+        <a href="../index.html"><img src="/assets/arrow.svg" alt="arrow" /> </a>
+      </div>
+      <div class="logo-container">
+        <img id="logo" src="/assets/gifOF_logo.png" alt="gifOF_logo" />
       </div>
     </nav>
 
-    <section id="crear-guifo">
-      <div><p>Crear Guifos</p></div>
-      <div>
-        <div>
-          <div><p>img ref</p></div>
-          <h3>Aqui podras crear tus propios gifs</h3>
+    <section id="crear-guifo" class="create-container">
+      <div class="header"><p>Crear Guifos</p></div>
+      <div class="content-container">
+        <div class="title">
+          <div><img src="../assets/window img.png" alt="window-img" /></div>
+          <div><h3>Aquí podras crear tus propios guifos</h3></div>
         </div>
-        <p>texto explicativo</p>
+        <p>
+          Crear tu <span class="black">guifo</span> es muy fácil, graba
+          cualquier imagen con tu cámara y obtén guifos personalizados. Los
+          pasos para crear tu guifo son:
+        </p>
         <ul>
           <li>
-            1. dar permisos de acceso a la camara (solo por el tiempo de uso)
+            <span class="black">1)</span> Dar permisos de acceso a la camara
+            (sólo por el tiempo de uso)
           </li>
-          <li>2. capturar tu momento guifo</li>
-          <li>3. revisar el momento</li>
-          <li>4. listo para subir y compartir</li>
+          <li><span class="black">2)</span> Capturar tu momento guifo</li>
+          <li><span class="black">3)</span> Revisar el momento</li>
+          <li><span class="black">4)</span> Listo para subir y compartir!</li>
         </ul>
-        <p>comenzar?</p>
-      </div>
-      <div>
-        <button onclick="cancelarProceso()">cancelar</button>
-        <button onclick="iniciarEtapa1()">comenzar</button>
+        <p>
+          ¿Quieres comenzar a crear tu <span class="black">guifo</span> ahora?
+        </p>
+        <div class="button-container">
+          <button class="btn-cancel" id="btn-cancel" onclick="cancelarProceso()">
+            Cancelar
+          </button>
+          <button class="btn-start" id="btn-start" onclick="iniciarEtapa1()">Comenzar</button>
+        </div>
       </div>
     </section>
 
-    <section id="etapas">
-      <p id="etapa"></p>
-      <video id="video" autoplay muted style="display: none"></video>
-      <div>
-        <button id="btnCapturar" style="display: none">capturar</button>
+    <section id="etapas" class="etapas">
+      <div class="header" id="header">
+        <p id="etapa"></p>
+        <img src="../assets/button close.svg" alt="btn-close" id="btn-close" />
+      </div>
+      <div class="video-container" id="video-container">
+        <video id="video" autoplay muted style="display: none"></video>
+      </div>
+      <div class="btn-container">
+        <button id="btnCapturar" class="btn-capturar" style="display: none">capturar</button>
         <p id="cronometro" style="display: none">00:00</p>
         <button id="btnListo" style="display: none">listo</button>
         <button id="btnRepetir" style="display: none">repetir captura</button>
@@ -80,7 +98,7 @@
     </section>
 
     <!-- my gifs -->
-    <div class=""><p>Mis guifos</p></div>
+    <div class="my-gifs-container"><p>Mis guifos</p></div>
 
     <!-- result -->
     <section>
@@ -88,9 +106,9 @@
       <div class="" id="resultMyGiphy"></div>
     </section>
 
-    <!-- <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
     <script src="../environments/env.js"></script>
 
-    <script src="/services/createGiphy.js"></script> -->
+    <script src="/services/createGiphy.js"></script>
   </body>
 </html>

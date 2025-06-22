@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/myGifs.css" />
+    <link rel="stylesheet" href="/global.css" />
     <title>GIPHY</title>
   </head>
   <body onload="getAllMyGifs()">
-    <header>
+    <header class="header-container">
       <p>
         ¡Bienvenidos/as a Guifos.com! ------ Donde los gifs están.//////Número
         de visitas: 12.765.803
@@ -14,34 +16,41 @@
     </header>
 
     <!-- navbar -->
-    <nav>
+    <nav class="navbar-container">
       <!-- left -->
-      <div class="">gif.os</div>
+      <div class="logo-container">
+        <img id="logo" src="/assets/gifOF_logo.png" alt="gifOF_logo" />
+      </div>
 
       <!-- right -->
-      <div class="">
-        <button><a href="./createGifs.html">Crear Guifos</a></button>
-        <select name="select" id="">
+      <div class="buttons-container">
+        <button class="button">
+          <a href="/pages/createGifs.html">Crear Guifos</a>
+        </button>
+        <select name="themeSelect" id="themeSelect" class="themeSelect">
           <option value="elegirTema" selected>Elegir Tema</option>
-          <option value="gifUno">Claro</option>
-          <option value="gifDos">Oscuro</option>
+          <option value="light" class="selected">Sailor Day</option>
+          <option value="dark">Sailor Night</option>
         </select>
-        <a href="./myGifs.html">Mis Guifos</a>
+        <a href="/pages/myGifs.html" class="link">Mis Guifos</a>
       </div>
     </nav>
 
     <!-- my gifs -->
-    <div class=""><p>Mis guifos</p></div>
+    <div class="my-gifs-container"><p>Mis guifos</p></div>
 
     <!-- result -->
-    <section>
-      <div class="" id="statusMyGiphy"></div>
-      <div class="" id="resultMyGiphy"></div>
-    </section>
+    <div class="result-card-container">
+      <section>
+        <div class="" id="statusMyGiphy"></div>
+        <div class="" id="resultMyGiphy"></div>
+      </section>
+    </div>
 
     <!-- <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
     <script src="../environments/env.js"></script>
-
     <script src="/services/createGiphy.js"></script> -->
+
+    <script src="/app.js"></script>
   </body>
 </html>

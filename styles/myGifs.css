@@ -1,0 +1,145 @@
+/* mobile */
+
+.header-container {
+  width: 100%;
+  height: 3rem;
+  background: linear-gradient(to right, #4180f6 0%, #f7c9f3 100%);
+
+  p {
+    color: aliceblue;
+    font-size: smaller;
+    padding: 0.5rem;
+  }
+}
+
+.navbar-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+
+  .logo-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0rem;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  .buttons-container {
+    width: 100%;
+    height: 10rem;
+    padding: 1rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    .button,
+    .themeSelect {
+      background-color: #f7c9f3;
+      color: #110038;
+      border: 1px solid #110038;
+      padding: 8px 12px;
+      font-weight: normal;
+      cursor: pointer;
+      width: 50%;
+
+      box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
+    }
+
+    .themeSelect {
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%232e1f44' stroke-width='2'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 8px center;
+      text-align: center;
+    }
+
+    .link {
+      position: relative;
+      text-decoration: none;
+    }
+
+    .link::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 10px;
+      height: 1px;
+      background-color: black;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.my-gifs-container {
+  width: 100%;
+  padding: 0 1rem;
+
+  p {
+    border: 1px solid #e6bbe2;
+    box-shadow: inset -2px -2px 0 0 #e6dce4, inset 2px 2px 0 0 #80687d;
+    padding: 0.2rem;
+  }
+}
+
+.result-card-container {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+#resultMyGiphy {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+/* Card individual */
+.card-container {
+  width: 100%;
+}
+
+/* Imagen con proporción adaptable */
+.img-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* TABLET (mínimo 600px): 2 columnas */
+@media (min-width: 600px) {
+  #result {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* DESKTOP (mínimo 900px): 3 columnas */
+@media (min-width: 900px) {
+  #result {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* GRANDE (mínimo 1200px): 4 columnas */
+@media (min-width: 1200px) {
+  #result {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1200px;
+  }
+}

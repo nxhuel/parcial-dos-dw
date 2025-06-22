@@ -1,0 +1,238 @@
+/* mobile */
+
+.header-container {
+  width: 100%;
+  height: 3rem;
+  background: linear-gradient(to right, #4180f6 0%, #f7c9f3 100%);
+
+  p {
+    color: aliceblue;
+    font-size: smaller;
+    padding: 0.5rem;
+  }
+}
+
+.navbar-container {
+  width: 100%;
+  padding: 0.5rem 0;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .logo-container {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0rem;
+    align-items: center;
+
+    img {
+      object-fit: cover;
+      padding: 0 0rem;
+      height: 2rem;
+    }
+
+    a {
+      object-fit: cover;
+      padding: 0 1rem;
+
+      img {
+        height: 1.2rem;
+      }
+    }
+  }
+}
+
+.create-container {
+  padding: 1rem;
+
+  .header {
+    width: 100%;
+    height: 2rem;
+    background: linear-gradient(to right, #4180f6 0%, #f7c9f3 100%);
+    box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
+
+    p {
+      color: aliceblue;
+      font-size: smaller;
+      padding: 0.5rem;
+    }
+  }
+
+  .content-container {
+    padding: 1rem;
+    background: #e6e6e6;
+    box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
+
+    .title {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      padding-bottom: 0.5rem;
+
+      align-items: center;
+      text-align: center;
+
+      h3 {
+        padding-left: 0.5rem;
+        font-size: 0.8rem;
+      }
+    }
+
+    p,
+    ul {
+      font-size: 0.9rem;
+    }
+
+    ul {
+      padding: 0.5rem 0;
+    }
+
+    .black {
+      font-weight: bold;
+    }
+
+    .button-container {
+      padding-top: 0.5rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: end;
+      gap: 0.5rem;
+
+      .btn-cancel {
+        padding: 0.3rem;
+        background: #fff4fd;
+        border: 1px solid #110038;
+        box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
+      }
+
+      .btn-start {
+        padding: 0.3rem;
+        background: #f7c9f3;
+        border: 1px solid #110038;
+        box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
+      }
+    }
+  }
+}
+
+.etapas {
+  /* background-color: #110038; */
+  padding: 1rem;
+  display: none;
+
+  .header {
+    /* display: none; */
+
+    height: 3rem;
+    background: linear-gradient(to right, #4180f6 0%, #f7c9f3 100%);
+    box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    position: relative;
+
+    p {
+      color: aliceblue;
+      font-size: smaller;
+      /* padding: 0.5rem; */
+      font-weight: bolder;
+
+      flex-grow: 1;
+    }
+
+    img {
+      display: none;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      height: 1rem;
+      width: auto;
+    }
+  }
+
+  .video-container {
+    display: none;
+    width: 100%;
+    height: 20rem;
+
+    overflow: hidden;
+
+    video {
+      width: 100%;
+      height: 20rem;
+      object-fit: cover;
+    }
+  }
+}
+
+.my-gifs-container {
+  width: 100%;
+  padding: 0 1rem;
+
+  p {
+    border: 1px solid #e6bbe2;
+    box-shadow: inset -2px -2px 0 0 #e6dce4, inset 2px 2px 0 0 #80687d;
+    padding: 0.2rem;
+  }
+}
+
+.result-card-container {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+#resultMyGiphy {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+/* Card individual */
+.card-container {
+  width: 100%;
+}
+
+/* Imagen con proporción adaptable */
+.img-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* TABLET (mínimo 600px): 2 columnas */
+@media (min-width: 600px) {
+  #result {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* DESKTOP (mínimo 900px): 3 columnas */
+@media (min-width: 900px) {
+  #result {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* GRANDE (mínimo 1200px): 4 columnas */
+@media (min-width: 1200px) {
+  #result {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1200px;
+  }
+}

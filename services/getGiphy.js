@@ -26,67 +26,28 @@ async function searchGif(event) {
         }
 
         status.textContent = '';
+
         data.data.forEach(gif => {
-            const img = document.createElement('img');
+            // Card structure
+            const card = document.createElement("div");
+            card.classList.add("card-container");
+
+            const imgContainer = document.createElement("div");
+            imgContainer.classList.add("img-container");
+
+            const img = document.createElement("img");
             img.src = gif.images.fixed_height.url;
-            img.alt = gif.title;
-            content.appendChild(img);
+            img.alt = gif.title || "GIF";
+
+            imgContainer.appendChild(img);
+            card.appendChild(imgContainer);
+            content.appendChild(card);
         });
     } catch (err) {
         console.error("Error al buscar GIFs:", err);
         status.textContent = "Ocurrió un error al buscar los GIFs.";
     }
 }
-
-// async function getAllSuggestion() {
-//     const tags = ['funny', 'reaction', 'happy', 'wow'];
-//     const randomTag = tags[Math.floor(Math.random() * tags.length)];
-
-//     const URL_API_SUGGESTION = `${ENV.BASE_URL}/search?api_key=${ENV.API_KEY}&q=${randomTag}&limit=4`;
-
-//     const res = await fetch(URL_API_SUGGESTION);
-//     const data = await res.json();
-
-//     const content = document.getElementById('suggestion');
-//     content.innerHTML = '';
-
-//     data.data.forEach(gif => {
-//         // card-container
-//         const card = document.createElement("div");
-//         card.classList.add("card-container");
-
-//         // header
-//         const header = document.createElement("div");
-//         const title = document.createElement("p");
-//         title.textContent = `#${gif.title || "GIF"}`;
-//         const closeBtn = document.createElement("button");
-//         closeBtn.textContent = "x";
-//         closeBtn.onclick = () => card.remove();
-//         header.appendChild(title);
-//         header.appendChild(closeBtn);
-
-//         // image
-//         const imgContainer = document.createElement("div");
-//         const img = document.createElement("img");
-//         img.src = gif.images.fixed_height.url;
-//         img.alt = gif.title;
-//         imgContainer.appendChild(img);
-
-//         // button "Ver más..."
-//         const moreBtn = document.createElement("button");
-//         moreBtn.textContent = "Ver más...";
-//         moreBtn.onclick = () => {
-//             // Ejemplo: abrir Giphy original
-//             window.open(gif.url, "_blank");
-//         };
-
-//         // complete card
-//         card.appendChild(header);
-//         card.appendChild(imgContainer);
-
-//         content.appendChild(card);
-//     });
-// }
 
 async function getAllSuggestion() {
     const tags = ['funny', 'reaction', 'happy', 'wow'];
