@@ -1,8 +1,34 @@
-/* Estilos para tabletas (768px y más) */
+/* tablets (768px y más) */
 @media (min-width: 768px) {
   /* body {
     background-color: aqua !important;
   } */
+
+  .header-container {
+    height: 2rem !important;
+  }
+
+  .navbar-container-extra {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+
+    .logo-container {
+      img {
+        height: 3rem;
+      }
+
+      a {
+        img {
+          height: 1.8rem;
+        }
+      }
+    }
+  }
 
   .navbar-container {
     /* background-color: blueviolet; */
@@ -21,7 +47,7 @@
 
     .buttons-container {
       /* background-color: #997d97; */
-      width: 60%;
+
       height: 5rem;
       display: flex;
       flex-direction: row;
@@ -30,7 +56,7 @@
 
       .button,
       .themeSelect {
-        width: 25%;
+        width: 30%;
       }
     }
   }
@@ -85,9 +111,57 @@
       grid-template-columns: repeat(2, 1fr);
     }
   }
+
+  .etapas {
+    /* background-color: #110038; */
+    padding: 1rem;
+    display: none;
+
+    .header {
+      /* display: none; */
+
+      height: 3rem;
+      background: linear-gradient(to right, #4180f6 0%, #f7c9f3 100%);
+      box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      gap: 1rem;
+      position: relative;
+
+      p {
+        color: aliceblue;
+        font-size: smaller;
+        /* padding: 0.5rem; */
+        font-weight: bolder;
+
+        flex-grow: 1;
+      }
+
+      img {
+        display: none;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        height: 1rem;
+        width: auto;
+      }
+    }
+
+    .video-container {
+      height: 30rem;
+
+      video {
+        height: 30rem;
+      }
+    }
+  }
 }
 
-/* Estilos para notebooks (1024px y más) */
+/* notebooks - pc's (1024px y más) */
 @media (min-width: 1024px) {
   /* body {
     background-color: red !important;
@@ -134,6 +208,54 @@
     #trending {
       grid-template-columns: repeat(4, 1fr);
       max-width: 1200px;
+    }
+  }
+
+  .etapas {
+    /* background-color: #110038; */
+    padding: 1rem;
+    display: none;
+
+    .header {
+      /* display: none; */
+
+      height: 3rem;
+      background: linear-gradient(to right, #4180f6 0%, #f7c9f3 100%);
+      box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      gap: 1rem;
+      position: relative;
+
+      p {
+        color: aliceblue;
+        font-size: smaller;
+        /* padding: 0.5rem; */
+        font-weight: bolder;
+
+        flex-grow: 1;
+      }
+
+      img {
+        display: none;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        height: 1rem;
+        width: auto;
+      }
+    }
+
+    .video-container {
+      height: 45rem;
+
+      video {
+        height: 45rem;
+      }
     }
   }
 }

@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles/myGifs.css" />
     <link rel="stylesheet" href="/global.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles/styleResponsive.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
     <title>GIPHY</title>
   </head>
   <body onload="getAllMyGifs()">
@@ -16,7 +24,7 @@
     </header>
 
     <!-- navbar -->
-    <nav class="navbar-container">
+    <nav class="navbar-container container">
       <!-- left -->
       <div class="logo-container">
         <img id="logo" src="/assets/gifOF_logo.png" alt="gifOF_logo" />
@@ -37,19 +45,19 @@
     </nav>
 
     <!-- my gifs -->
-    <div class="my-gifs-container"><p>Mis guifos</p></div>
+    <div class="my-gifs-container container"><p>Mis guifos</p></div>
 
     <!-- result -->
-    <div class="result-card-container">
+    <div class="result-card-container container">
       <section>
         <div class="" id="statusMyGiphy"></div>
         <div class="" id="resultMyGiphy"></div>
       </section>
     </div>
 
-    <!-- <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
     <script src="../environments/env.js"></script>
-    <script src="/services/createGiphy.js"></script> -->
+    <script src="/services/createGiphy.js"></script>
 
     <script src="/app.js"></script>
   </body>

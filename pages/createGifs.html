@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles/createGifs.css" />
     <link rel="stylesheet" href="/global.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/styleResponsive.css" />
+
     <title>GIPHY</title>
   </head>
   <body>
@@ -16,7 +25,7 @@
     </header>
 
     <!-- navbar -->
-    <nav class="navbar-container">
+    <nav class="navbar-container-extra">
       <div class="logo-container">
         <a href="../index.html"><img src="/assets/arrow.svg" alt="arrow" /> </a>
       </div>
@@ -25,12 +34,16 @@
       </div>
     </nav>
 
-    <section id="crear-guifo" class="create-container">
+    <section id="crear-guifo" class="create-container container">
       <div class="header"><p>Crear Guifos</p></div>
       <div class="content-container">
         <div class="title">
           <div><img src="../assets/window img.png" alt="window-img" /></div>
-          <div><h3>Aquí podras crear tus propios guifos</h3></div>
+          <div>
+            <h3 class=" ">
+              <strong>Aquí podras crear tus propios guifos</strong>
+            </h3>
+          </div>
         </div>
         <p>
           Crear tu <span class="black">guifo</span> es muy fácil, graba
@@ -50,15 +63,21 @@
           ¿Quieres comenzar a crear tu <span class="black">guifo</span> ahora?
         </p>
         <div class="button-container">
-          <button class="btn-cancel" id="btn-cancel" onclick="cancelarProceso()">
+          <button
+            class="btn-cancel"
+            id="btn-cancel"
+            onclick="cancelarProceso()"
+          >
             Cancelar
           </button>
-          <button class="btn-start" id="btn-start" onclick="iniciarEtapa1()">Comenzar</button>
+          <button class="btn-start" id="btn-start" onclick="iniciarEtapa1()">
+            Comenzar
+          </button>
         </div>
       </div>
     </section>
 
-    <section id="etapas" class="etapas">
+    <section id="etapas" class="etapas container">
       <div class="header" id="header">
         <p id="etapa"></p>
         <img src="../assets/button close.svg" alt="btn-close" id="btn-close" />
@@ -67,7 +86,9 @@
         <video id="video" autoplay muted style="display: none"></video>
       </div>
       <div class="btn-container">
-        <button id="btnCapturar" class="btn-capturar" style="display: none">capturar</button>
+        <button id="btnCapturar" class="btn-capturar" style="display: none">
+          capturar
+        </button>
         <p id="cronometro" style="display: none">00:00</p>
         <button id="btnListo" style="display: none">listo</button>
         <button id="btnRepetir" style="display: none">repetir captura</button>
@@ -98,12 +119,12 @@
     </section>
 
     <!-- my gifs -->
-    <div class="my-gifs-container"><p>Mis guifos</p></div>
+    <div class="my-gifs-container container"><p>Mis guifos</p></div>
 
     <!-- result -->
-    <section>
+    <section class="container">
       <div class="" id="statusMyGiphy"></div>
-      <div class="" id="resultMyGiphy"></div>
+      <div class="" id="resultMyGiphy "></div>
     </section>
 
     <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>

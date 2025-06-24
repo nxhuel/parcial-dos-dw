@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="global.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/styleResponsive.css " />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <title>GIPHY</title>
   </head>
   <body>
@@ -17,7 +19,7 @@
     </header>
 
     <!-- navbar -->
-    <nav class="navbar-container">
+    <nav class="navbar-container container">
       <!-- left -->
       <div class="logo-container">
         <img id="logo" src="/assets/gifOF_logo.png" alt="gifOF_logo" />
@@ -38,7 +40,7 @@
     </nav>
 
     <!-- search -->
-    <div class="search-container">
+    <div class="search-container container">
       <section class="search-box">
         <div class="search-title"><p>Buscar</p></div>
         <form onsubmit="searchGif(event)">
@@ -58,7 +60,7 @@
     </div>
 
     <!-- result -->
-    <div class="result-card-container">
+    <div class="result-card-container container">
       <section>
         <div class="" id="status"></div>
         <div class="" id="result"></div>
@@ -74,12 +76,12 @@
     </div>
 
     <!--  suggestion -->
-    <div class="suggestion-container">
+    <div class="suggestion-container container">
       <p>Hoy te sugerimos:</p>
     </div>
 
     <!-- cards giphy suggestion -->
-    <div class="suggestion-card-container">
+    <div class="suggestion-card-container container">
       <section>
         <div class="" id="suggestion"></div>
         <!-- prueba -->
@@ -101,12 +103,12 @@
     </div>
 
     <!--  trending -->
-    <div class="trending-container">
+    <div class="trending-container container">
       <p>Tendencias:</p>
     </div>
 
     <!-- cards giphy trending -->
-    <div class="trending-card-container">
+    <div class="trending-card-container container">
       <section>
         <div class="" id="trending"></div>
 

@@ -2,9 +2,8 @@
 
 .header-container {
   width: 100%;
-  height: 2.5rem;
-  display: flex;
-  align-items: center;
+  height: 3rem;
+
   background: linear-gradient(to right, #4180f6 0%, #f7c9f3 100%);
 
   p {
@@ -190,6 +189,8 @@
       color: aliceblue;
       display: flex;
       flex-direction: row;
+      align-items: center;
+
       justify-content: space-between;
       width: 100%;
       padding: 0.5rem;
@@ -287,6 +288,14 @@
   padding: 0.5rem;
 }
 
+#resultMyGiphy {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+}
+
 /* Card individual */
 .card-container {
   width: 100%;
@@ -310,6 +319,10 @@
   #result {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  #resultMyGiphy {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* DESKTOP (mínimo 900px): 3 columnas */
@@ -317,11 +330,20 @@
   #result {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  #resultMyGiphy {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* GRANDE (mínimo 1200px): 4 columnas */
 @media (min-width: 1200px) {
   #result {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1200px;
+  }
+
+  #resultMyGiphy {
     grid-template-columns: repeat(4, 1fr);
     max-width: 1200px;
   }

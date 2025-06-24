@@ -10,14 +10,14 @@ ol {
 }
 
 a {
-  color: inherit;
+  color: inherit !important;
   text-decoration: none;
 }
 
 body {
   background-color: aliceblue;
   color: #222;
-  font-family: ChakraPetch-Regular;
+  font-family: ChakraPetch-Regular !important;
   transition: background-color 0.3s, color 0.3s;
 }
 
