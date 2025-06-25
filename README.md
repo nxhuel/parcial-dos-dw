@@ -9,12 +9,12 @@ Este proyecto replica y moderniza la interfaz de Giphy, permitiendo al usuario e
 ### ⚙️ Instalación
 1. Cloná el repositorio:
 ``` bash
-git clone https://github.com/tuusuario/giphy-redesign.git
+git clone git@github.com:tuusuario/parcial-dos-dw.git
 ```
 
 2. Accedé al proyecto:
 ``` bash
-cd giphy-redesign
+cd parcial-dos-dw
 ```
 3. Abrí el archivo index.html con tu navegador.
 `No requiere instalación adicional`
