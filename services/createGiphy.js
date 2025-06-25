@@ -23,13 +23,16 @@ function cancelarProceso() {
     etapa.textContent = '';
     video.style.display = 'none';
     preview.style.display = 'none';
-    document.querySelectorAll('button').forEach(btn => btn.style.display = 'none');
+    // document.querySelectorAll('button').forEach(btn => btn.style.display = 'none');
     btnCancel.style.display = 'block';
     btnStart.style.display = 'block'
+    btnClose.style.display = 'block'
+    document.getElementById("crear-guifo").style.display = "block";
 
 }
 
 function iniciarEtapa1() {
+    document.getElementById("crear-guifo").style.display = "none";
     document.getElementById("header").style.display = "block";
     etapas.style.display = "block";
     etapa.textContent = "Un chequeo antes de empezar";
@@ -70,7 +73,7 @@ document.getElementById("btnCapturar").onclick = () => {
     }, 1000);
 
     document.getElementById("btnCapturar").style.display = "none";
-    document.getElementById("btnListo").style.display = "inline";
+    document.getElementById("btnListo").style.display = "block";
 };
 
 document.getElementById("btnListo").onclick = () => {
@@ -190,9 +193,11 @@ async function getAllMyGifs() {
     if (ids.length === 0) {
         estado.textContent = "Todavía no creaste ningún guifo.";
         return;
-    }
+    } 
 
     estado.textContent = "Cargando tus guifos...";
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    estado.textContent = "Tus guifos creados:";
 
     for (let i = ids.length - 1; i >= 0; i--) {
         const id = ids[i];
@@ -205,8 +210,6 @@ async function getAllMyGifs() {
         contenedor.appendChild(img);
     }
 
-    estado.textContent = '';
-    // estado.textContent = "Tus guifos creados:";
 }
 
 window.onload = () => {

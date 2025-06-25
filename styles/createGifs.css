@@ -157,6 +157,7 @@
   }
 
   .video-container {
+    background-color: #e6e6e6;
     display: none;
     width: 100%;
     height: 20rem;
@@ -167,6 +168,73 @@
       width: 100%;
       height: 20rem;
       object-fit: cover;
+    }
+
+    #preview {
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .btn-listo {
+    background-color: #ff6161;
+    color: #ffffff;
+  }
+
+  .btn-capturar,
+  .btn-subir {
+    background-color: #f7c9f3;
+  }
+
+  .btn-repetir {
+    background: #fff4fd;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
+  }
+
+  .btn-container {
+    /* background-color: #110038; */
+    background-color: #e6e6e6;
+    box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 0px 0 0 #ffffff;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    padding-right: 1rem;
+
+    .btn-capturar,
+    .btn-listo,
+    .cronometr,
+    .btn-subir,
+    .btn-repetir {
+      width: 10rem;
+      /* display: flex !important; */
+      display: flex;
+      flex-direction: row;
+
+      img {
+        border-right: 2px solid black;
+        padding: 0.5rem;
+      }
+      p {
+        width: 100%;
+        margin-bottom: 0;
+        padding: 0.5rem;
+        text-align: center;
+      }
+    }
+
+    .cronometro {
+      width: 5rem;
+      align-items: center;
+      text-align: center;
+      background: #ffffff;
+      border: 1px solid #979797;
+      box-shadow: inset -2px -2px 0 0 #e6e6e6, inset 2px 2px 0 0 #000000;
     }
   }
 }

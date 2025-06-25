@@ -33,13 +33,13 @@
   .navbar-container {
     /* background-color: blueviolet; */
     display: flex;
-    flex-direction: row;
+    flex-direction: row !important;
     justify-content: space-between;
 
     .logo-container {
       /* background-color: blue; */
-      width: 50%;
-      height: 5rem;
+      width: 50% !important;
+      height: 5rem !important;
       display: flex;
       justify-content: start;
       padding-left: 2rem;
@@ -48,15 +48,15 @@
     .buttons-container {
       /* background-color: #997d97; */
 
-      height: 5rem;
+      height: 5rem !important;
       display: flex;
-      flex-direction: row;
+      flex-direction: row !important;
       align-items: center;
       justify-content: space-evenly;
 
       .button,
       .themeSelect {
-        width: 30%;
+        width: 30% !important;
       }
     }
   }
@@ -152,9 +152,13 @@
     }
 
     .video-container {
+      align-items: center;
+      display: flex !important;
+      justify-content: center;
       height: 30rem;
 
       video {
+        width: 90%;
         height: 30rem;
       }
     }
@@ -170,6 +174,15 @@
   nav {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .navbar-container {
+    .buttons-container {
+      .button,
+      .themeSelect {
+        width: 20% !important;
+      }
+    }
   }
 
   .search-container {
@@ -251,9 +264,13 @@
     }
 
     .video-container {
+      align-items: center;
+      display: flex !important;
+      justify-content: center;
       height: 45rem;
 
       video {
+        width: 90%;
         height: 45rem;
       }
     }

@@ -30,7 +30,9 @@
         <a href="../index.html"><img src="/assets/arrow.svg" alt="arrow" /> </a>
       </div>
       <div class="logo-container">
-        <img id="logo" src="/assets/gifOF_logo.png" alt="gifOF_logo" />
+        <a href="/index.html">
+          <img id="logo" src="/assets/gifOF_logo.png" alt="gifOF_logo" />
+        </a>
       </div>
     </nav>
 
@@ -80,19 +82,33 @@
     <section id="etapas" class="etapas container">
       <div class="header" id="header">
         <p id="etapa"></p>
-        <img src="../assets/button close.svg" alt="btn-close" id="btn-close" />
+        <button onclick="cancelarProceso()">
+          <img
+            src="../assets/button close.svg"
+            alt="btn-close"
+            id="btn-close"
+          />
+        </button>
       </div>
       <div class="video-container" id="video-container">
         <video id="video" autoplay muted style="display: none"></video>
+        <div id="preview" style="display: none"></div>
       </div>
       <div class="btn-container">
         <button id="btnCapturar" class="btn-capturar" style="display: none">
-          capturar
+          <!-- <img src="/assets/camera.svg" alt="camera" /> -->
+          <p>Capturar</p>
         </button>
-        <p id="cronometro" style="display: none">00:00</p>
-        <button id="btnListo" style="display: none">listo</button>
-        <button id="btnRepetir" style="display: none">repetir captura</button>
-        <button id="btnSubir" style="display: none">subir Guifo</button>
+        <p id="cronometro" class="cronometro" style="display: none">00:00</p>
+        <button id="btnListo" class="btn-listo" style="display: none">
+          listo
+        </button>
+        <button id="btnRepetir" class="btn-repetir" style="display: none">
+          repetir captura
+        </button>
+        <button id="btnSubir" class="btn-subir" style="display: none">
+          subir Guifo
+        </button>
         <button
           id="btnCancelar"
           style="display: none"
@@ -100,13 +116,16 @@
         >
           cancelar
         </button>
-        <button id="btnCopiar" style="display: none">
+        <button id="btnCopiar" class="btn-repetir" style="display: none">
           Copiar enlace Guifo
         </button>
-        <button id="btnDescargar" style="display: none">Descargar Guifo</button>
-        <button id="btnListoFinal" style="display: none">Listo</button>
+        <button id="btnDescargar" class="btn-repetir" style="display: none">
+          Descargar Guifo
+        </button>
+        <button id="btnListoFinal" class="btn-capturar" style="display: none">
+          Listo
+        </button>
       </div>
-      <div id="preview" style="display: none"></div>
       <div
         id="barraUpload"
         style="display: none; background: #eee; width: 100%; height: 10px"
@@ -124,7 +143,7 @@
     <!-- result -->
     <section class="container">
       <div class="" id="statusMyGiphy"></div>
-      <div class="" id="resultMyGiphy "></div>
+      <div class="" id="resultMyGiphy"></div>
     </section>
 
     <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
